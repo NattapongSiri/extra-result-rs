@@ -1,0 +1,16 @@
+[package]
+name = "extra-result"
+description = "Add extra methods to `Result` enum."
+version = "1.0.0"
+edition = "2024"
+repository = "https://github.com/NattapongSiri/extra-result-rs"
+authors = [ "Nattapong Sirilappanich" ]
+readme = "README.md"
+license = "MIT"
+keywords = [ "async", "result", "extension", "extra", "await" ]
+categories = [ "asynchronous", "no-std", "concurrency" ]
+
+[dependencies]
+
+[dev-dependencies]
+tokio = { version = "1.45.0", features = ["macros", "rt"] }
