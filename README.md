@@ -14,9 +14,9 @@ Current methods added is
 - `is_ok_and_fut`
 - `is_err_and_fut`
 
-All these methods is a mirror of methods of regular `Result` but it accept async function instead.
+All these methods is a mirror of a method of regular `Result` but it accept async function instead.
 
 ## How to use.
 Simply add `use extra_result::*;` to a source file that going to use above methods.
 
-Note that the crate only provide single trait name `ExtraResult`. It is also possible to `use extra_result::ExtraResult;` instead of using wildcard but it won't make any different.
+Note: The crate only provide single trait name `ExtraResult`. It is also possible to `use extra_result::ExtraResult;` instead of using wildcard but it won't make any different.

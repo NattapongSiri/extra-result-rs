@@ -1,6 +1,7 @@
 #![no_std]
+#![doc = include_str!("../README.md")]
 
-/// Add extra functionality to the [Result] type.
+/// Add extra functionalities to the [Result] type.
 /// This trait provides a set of async versions of the standard [Result] methods.
 /// Unlike the standard methods, these methods accept async functions as arguments.
 /// It return a [Future] that resolves to the same result of standard [Result] counterpart.
