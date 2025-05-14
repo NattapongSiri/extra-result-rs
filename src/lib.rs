@@ -101,7 +101,6 @@ impl<T, E> ExtraResult<T, E> for Result<T, E> {
     #[inline]
     fn map_fut<U, F>(self, f: F) -> impl Future<Output = Result<U, E>>
     where
-        Self: Sized,
         F: AsyncFnOnce(T) -> U,
     {
         async {
@@ -116,7 +115,6 @@ impl<T, E> ExtraResult<T, E> for Result<T, E> {
     #[inline]
     fn map_or_fut<U, F>(self, default: U, f: F) -> impl Future<Output = U>
     where
-        Self: Sized,
         F: AsyncFnOnce(T) -> U,
     {
         async {
@@ -131,7 +129,6 @@ impl<T, E> ExtraResult<T, E> for Result<T, E> {
     #[inline]
     fn map_or_else_fut<U, D, F>(self, default: D, f: F) -> impl Future<Output = U>
     where
-        Self: Sized,
         D: AsyncFnOnce(E) -> U,
         F: AsyncFnOnce(T) -> U,
     {
@@ -189,7 +186,6 @@ impl<T, E> ExtraResult<T, E> for Result<T, E> {
     #[inline]
     fn and_then_fut<U, F>(self, f: F) -> impl Future<Output = Result<U, E>>
     where
-        Self: Sized,
         F: AsyncFnOnce(T) -> Result<U, E>,
     {
         async {
